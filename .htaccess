@@ -1,0 +1,13 @@
+# Warehouse Management System — root .htaccess
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Protect sensitive directories (fallback if directory .htaccess is missing)
+<IfModule mod_authz_core.c>
+    <If "%{REQUEST_URI} =~ m#/(config|database)/#">
+        Require all denied
+    </If>
+</IfModule>

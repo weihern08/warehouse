@@ -1,0 +1,14 @@
+# Local secrets / environment
+config/config.php
+db_ping.php
+database/setup_local.php
+database/cleanup_and_check.php
+database/smoke_test.php
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.log
